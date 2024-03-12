@@ -8,11 +8,20 @@
 <body>
     <h1>Documento JavaScript</h1>
     <script>
-        let curso = "Desenvolvedor Frond End";
+        let curso = "Desenvolvemento Frond-End";
+        var nome = "Gustavo"
         var data = new Date();
-        document.write(data);
-        console.log(data)
-        alert(curso)
+        var dia = data.getDate();
+        var mes = data.getMonth()+1; // é preciso incrementar uma posição para dar um get na lista correta
+        var ano = data.getFullYear();
+        var dataCompletaSimplificada = data.toLocaleDateString()
+        var horaCompleta = data.toLocaleTimeString()
+
+        document.write("<p>Olá me chamo <b>"+nome+"</b>, estudo "+curso+", no SENAC.</p>" + "<p><b>Hoje é:</b>"+dataCompletaSimplificada+"</p>" + "<p><b>Hora certa: <b>"+horaCompleta+"</p>");
+        // alert(curso)
+        console.log("Olá me chamo " +nome+", estudo "+curso+" no SENAC. Hoje é: "+dataCompletaSimplificada+ ".")
+        console.log(horaCompleta)
+        console.log(typeof horaCompleta)
     </script>
 </body>
 </html>

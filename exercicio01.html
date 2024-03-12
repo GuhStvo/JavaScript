@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Alertas</h1>
+
+
+    <script>
+        var nome = prompt('Qual é seu nome?')
+        var minhaIdade = prompt('Qual é sua idade? (Apenas números)')
+        var parente = prompt('Qual o nome do seu parente mais próximo?')
+        var idadeParente = (prompt('Qual é a idade do parente mais próximo? (Apenas números)'))
+
+        //Variável para pegar data
+        const data = new Date()
+        //Variável para simplificar nesse modelo: dd/mm/aaaa
+        const dataSimples = data.toLocaleDateString()
+
+        //Variável para somar a
+        var somaIdades = Number((idadeParente + minhaIdade))
+
+        document.write("<p>Meu nome é: "+nome+"<br>Minha idade é: "+minhaIdade+"<br>O nome do meu parente é: "+parente+"<br>Sua idade é: "+idadeParente+"<br>Data de inscrição: "+dataSimples+"<br>O resultado da soma das idades vão dar: "+somaIdades+"</p>")
+        
+        console.log(typeof somaIdades)
+    </script>
+</body>
+</html>
