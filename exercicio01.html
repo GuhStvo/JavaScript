@@ -6,10 +6,13 @@
     <title>Exercício</title>
 </head>
 <body>
-    <h1>Alertas</h1>
+    <h1 style="color: #3c1616; background-color: #fff; display: inline;border: dotted red; padding: 1%;">Alertas</h1>
 
 
     <script>
+        document.body.style.backgroundColor = "#110E0D"
+        document.body.style.color = "#fff"
+
         var nome = prompt('Qual é seu nome?')
         var minhaIdade = prompt('Qual é sua idade? (Apenas números)')
         var parente = prompt('Qual o nome do seu parente mais próximo?')
@@ -21,7 +24,7 @@
         const dataSimples = data.toLocaleDateString()
 
         //Variável para somar a
-        var somaIdades = Number((idadeParente + minhaIdade))
+        var somaIdades = (Number(minhaIdade) + Number(idadeParente))
 
         document.write("<p>Meu nome é: "+nome+"<br>Minha idade é: "+minhaIdade+"<br>O nome do meu parente é: "+parente+"<br>Sua idade é: "+idadeParente+"<br>Data de inscrição: "+dataSimples+"<br>O resultado da soma das idades vão dar: "+somaIdades+"</p>")
         
