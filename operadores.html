@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores matemáticos</title>
+
+</head>
+<body style="font-family: sans-serif; text-align: center;">
+    
+    <script>
+        //Váriaveis para IMC
+        var altura = Number(prompt("Digite sua altura (cm)"))
+        var peso = Number(prompt("Digite seu peso(kg)"))
+        var calcAltura = (altura * altura)
+        var formulaFinal = (peso / calcAltura) * 10000
+
+        //Váriaveis para porcentagem de mercadoria
+        var valorMercadoria = Number(prompt("Digite o valor da mercadoria:"))
+        var porcentagemLucro = Number(prompt("Digite a procentagem do seu lucro da mercadoria:"))
+        var calcPorcentagem = valorMercadoria * porcentagemLucro / 100
+
+        //Váriaveis de operadores matemáticos
+        const multiplicacao = 10 * 3
+        const adicao = 12 + 5
+        const subMult = 5 - (9 * 2)
+        const misto = subMult * ((3 + 4) / 2)
+        
+
+        alert("Seu IMC é de: " + formulaFinal.toFixed(2).replace(".", ",")) //Alerta do resultado do IMC
+        document.write("<h2>Seu lucro sobre o produto será de: "+calcPorcentagem+" reais.</h2>") // Resultado em tela do lucro
+
+        // Impressão
+        document.write("<h3>O resultado de 10 x 3 é: "+multiplicacao+"<h3>")
+        document.write("<h3>O resultado de 12 + 5 é: "+adicao+"<h3>")
+        document.write("<h3>O resultado de 5 - (9x2) é: "+subMult+"<h3>")
+        document.write("<h3>O resultado de 5 - (9x2) X (3+4) ÷ 2 é: "+misto+"<h3>")
+
+
+    </script>
+</body>
+</html>
