@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #area {
+            font-family: sans-serif;
+            font: normal;
+            background-color: blueviolet;
+            color: #fff;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            cursor: grab;
+            transition: 300ms;
+        }
+
+        #area:hover {
+            scale: 1.05;
+        }
+    </style>
+    <title>Funções</title>
+</head>
+<body>
+    <div id="area" onmouseout="sair()" onmouseenter="entrar()">
+        Interaja...
+    </div>
+
+    <script>
+        let a = document.getElementById('area');
+        a.addEventListener('click', clicar)
+        function entrar() {
+            a.innerText = 'Entrou'
+            a.style.backgroundColor = 'blue'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.background = 'blueviolet'
+            a.style.color = '#fff'
+        }
+
+        function clicar(){
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+            a.style.color = '#000'
+        }
+    </script>
+</body>
+</html>

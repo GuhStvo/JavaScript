@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com CSS</title>
+</head>
+
+<style>
+    button {
+        background-color: none;
+        border: solid 2px #000;
+        border-radius: 8px;
+        padding: 0.8%;
+        cursor: pointer;
+    }
+</style>
+
+<body style="font-family: sans-serif;">
+    <h1 id="titulo">Trabalahndo com CSS em javascript</h1>
+    <button onclick="document.getElementById('titulo').style.color = 'red'">Alterar a cor do Título</button>
+
+    <p id="paragrafo1">Texto com algum tipo de destaque.</p>
+    <button onclick="document.getElementById('paragrafo1').style.color = 'pink'">Alterar cor do paragrafo</button>
+
+    <p id="paragrafo2">Texto com muito destaque.</p>
+    <div>
+        <button onclick="document.getElementById('paragrafo2').style.fontSize = '25px'">Alterar o tamanho da fonte</button>
+        <button onclick="document.getElementById('paragrafo2').style.fontFamily = 'cursive';
+                        document.getElementById('paragrafo2').style.color = 'orange'
+                        document.getElementById('paragrafo2').style.fontWeight = 'bolder'
+        ">Alterar a fonte</button>
+    </div>
+
+    <hr>
+    <p id="texto">Texto desenvolvido por um clique</p>
+    <button onclick="document.getElementById('texto').innerHTML = 'Texto transformado'">Clique aqui</button> <!-- innerHTML - Substitui o que estava no id selecionado -->
+    
+
+    <p>
+        <button onclick="document.getElementById('acesa').src = 'img/luz.jpg'">Ligar</button>
+
+        <button id="ocultar" 
+            onclick="document.getElementById('acesa').style.display = 'none';
+            /* PARA OCULTAR O BOTÃO OCULTAR */
+            document.getElementById('ocultar').style.display = 'none';
+            /* FAZ APARECER O BOTÃO MOSTRAR */
+            document.getElementById('mostrar').style.display = ''"
+        >Ocultar</button>
+
+        <!-- BOTÃO MOSTRAR JÁ ESTA ESCONDIDO POR PADRÃO -->
+        <button style="display: none;" id="mostrar" 
+        onclick="document.getElementById('acesa').style.display = '';
+        /* PARA APARECER O BOTÃO OCULTAR */ 
+        document.getElementById('ocultar').style.display = '';
+        /* PARA OCULTAR O BOTÃO MOSTRAR */
+        document.getElementById('mostrar').style.display = 'none'"
+        >Mostrar</button>
+        <button onclick="document.getElementById('acesa').src = 'img/apagada.jpg'">Apagar</button>
+    </p>
+
+    <!-- Imagem pdrão da lâmpada -->
+    <img src="img/luz.jpg" alt="Lampada" id="acesa">
+    <p id="caixa"></p>
+
+    <!-- <button onclick="document.body.style.backgroundColor = '#264653'; document.body.style.color = '#E76F51';
+    document.getElementsByClassName('button').style.backgroundColor = '#264653'" id="mudarBG;"
+    style="position: fixed; top: 15px; right: 15px;" 
+    >Mudar Background</button> -->
+
+    <script src="js/acoes.js"></script>
+</body>
+</html>

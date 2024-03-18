@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+</head>
+
+<style>
+    body {
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 50px;
+    }
+
+    button {
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 5px;
+        border: dotted 3px green;
+        background-color: #fff;
+        cursor: pointer;
+
+        transition: 500ms;
+    }
+
+    button:hover {
+        background-color: green;
+        color: #fff;
+        border-radius: 5px 0;
+    }
+</style>
+<body>
+    
+    <img id="lampApagada" onmouseenter="mouseEntrou()" src="img/apagada.jpg" alt="Imagem de uma lâmpada">
+    <img id="lampAcesa" onmouseout="mouseSaiu()" onclick="quebrar()" src="img/luz.jpg" alt="" style="display: none;">
+    <img id="lampQuebrada" src="img/quebrada.jpg" alt="" style="display: none;">
+    <button id="btn" onclick="renovarLamp()">Renovar lâmpada</button>
+
+    <script>
+        let lampApagada = document.getElementById('lampApagada')
+        let lampAcesa = document.getElementById('lampAcesa')
+        let lampQuebrada = document.getElementById('lampQuebrada')
+
+        let btn = document.getElementById('btn')
+
+        function mouseEntrou() {
+            lampApagada.style.display = "none"
+            lampAcesa.style.display = ""
+        }
+
+        function mouseSaiu() {
+            lampAcesa.style.display = "none"
+            lampApagada.style.display = ""
+        }
+
+        function quebrar() {
+            lampQuebrada.style.display = ""
+            lampAcesa.style.width = "0px"
+            lampApagada.style.width = "0px"
+            }
+
+        function renovarLamp() {
+            lampQuebrada.style.display = "none"
+            lampApagada.style.width = "fit-content"
+            lampAcesa.style.width = "fit-content"
+        }
+    </script>
+
+</body>
+</html>
