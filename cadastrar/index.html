@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Cadastrar Colaborador</h1>
+            <form action="#">
+                <div class="separador">
+                    <div class="input-wraper">
+                        <label for="nome">Nome:</label>
+                        <input id="nome" type="text" autofocus required>
+                    </div>
+                    <div class="input-wraper">
+                        <label for="idade">Idade:</label>
+                        <input id="idade" type="number" required>
+                    </div>
+                </div>
+                <div class="separador">
+                    <div class="input-wraper">
+                        <label for="cargo">Cargo:</label>
+                        <input id="cargo" type="text" required>
+                    </div>
+                    <div class="input-wraper">
+                        <label for="salario">Salário:</label>
+                        <input id="salario" type="number" required>
+                    </div>
+                </div>
+                <button onclick="salvar()">Salvar</button>
+            </form>
+        </div>
+        <div class="container">
+            <h1>Ficha do Colaborador</h1>
+            <table>
+                <tr>
+                    <th>Nome Completo:</th>
+                    <td id="printNome"></td>
+                </tr>
+                <tr>
+                    <th>Idade:</th>
+                    <td id="printIdade"></td>
+                </tr>
+                <tr>
+                    <th>Salário</th>
+                    <td id="printSalario"></td>
+                </tr>
+                <tr>
+                    <th>Cargo:</th>
+                    <td id="printCargo"></td>
+                </tr>
+            </table>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

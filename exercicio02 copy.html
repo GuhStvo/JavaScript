@@ -18,7 +18,7 @@
         gap: 50px;
     }
 
-    button {
+    /* button {
         font-family: sans-serif;
         text-transform: uppercase;
         font-weight: 700;
@@ -34,45 +34,42 @@
         background-color: green;
         color: #fff;
         border-radius: 5px 0;
-    }
+    } */
 </style>
 <body>
     
     <div>
-        <img id="lampApagada" onmouseenter="mouseEntrou()" src="img/apagada.jpg" alt="Imagem de uma lâmpada">
-        <img id="lampAcesa" onmouseout="mouseSaiu()" onclick="quebrar()" src="img/luz.jpg" alt="" style="display: none;">
+        <img id="lampApagada" src="img/apagada.jpg" alt="Imagem de uma lâmpada">
+        <img id="lampAcesa" src="img/luz.jpg" alt="" style="display: none;">
         <img id="lampQuebrada" src="img/quebrada.jpg" alt="" style="display: none;">
     </div>
-    <button id="btn" onclick="renovarLamp()">Renovar lâmpada</button>
+    <!-- <button id="btn" onclick="renovarLamp()">Renovar lâmpada</button> -->
 
     <script>
         let lampApagada = document.getElementById('lampApagada')
         let lampAcesa = document.getElementById('lampAcesa')
         let lampQuebrada = document.getElementById('lampQuebrada')
 
-        let btn = document.getElementById('btn')
+        lampApagada.addEventListener('mouseenter', mouseEntrou)
+        lampAcesa.addEventListener('mouseout', mouseSaiu)
+        lampAcesa.addEventListener('click', quebrou)
 
         function mouseEntrou() {
-            lampApagada.style.display = "none"
-            lampAcesa.style.display = ""
+            lampApagada.style.display = "none";
+            lampAcesa.style.display = "";
         }
 
         function mouseSaiu() {
-            lampAcesa.style.display = "none"
+            lampAcesa.style.display = "none";
             lampApagada.style.display = ""
         }
 
-        function quebrar() {
+        function quebrou() {
+            lampAcesa.style.width = "0"
+            lampApagada.style.width = "0"
             lampQuebrada.style.display = ""
-            lampAcesa.style.width = "0px"
-            lampApagada.style.width = "0px"
-            }
-
-        function renovarLamp() {
-            lampQuebrada.style.display = "none"
-            lampApagada.style.width = "fit-content"
-            lampAcesa.style.width = "fit-content"
         }
+
     </script>
 
 </body>
