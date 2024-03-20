@@ -30,14 +30,16 @@
                             <option value="Operador tipo C">Operador tipo C</option>
                             <option value="Operador tipo B">Operador tipo B</option>
                             <option value="Operador tipo A">Operador tipo A</option>
+                            <option value="Impressor">Impressor</option>
+                            <option value="Extrusor">Extrusor</option>
                         </select>
                     </div>
                     <div class="input-wraper">
                         <label for="salario">Salário:</label>
-                        <input id="salario" type="number" required>
+                        <input id="salario" type="range" max="5000" required>
                     </div>
                 </div>
-                <button onclick="salvar()">Salvar</button>
+                <button onclick="salvar()" type="reset">Salvar</button>
             </form>
         </div>
         <div class="container">

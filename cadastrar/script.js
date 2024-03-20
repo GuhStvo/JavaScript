@@ -8,4 +8,6 @@ function salvar() {
     document.getElementById('printIdade').innerHTML = idade
     document.getElementById('printCargo').innerHTML = cargo
     document.getElementById('printSalario').innerHTML = salario
+
+    
 }
