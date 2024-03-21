@@ -8,27 +8,39 @@
 <body>
     <div id="container"></div>
     <h1>Acende a Lâmpada</h1>
+    <audio src="audio/interruptor1.mp3" id="audioAcende"></audio>
+    <audio src="audio/interruptor2.mp3" id="audioApaga"></audio>
+
+
 
     <img src="img/apagada.jpg" id="luz" alt="Lâmpada apagada"
     onmousemove="mudarLampada(1)" onmouseout="mudarLampada(2)" onclick="mudarLampada(3)">
 
     <script>
+        let audioQuebrando = new Audio()
+        audioQuebrando.src = 'audio/vidroquebrando.mp3'
+        let audioAcende = document.getElementById('audioAcende')
+        let audioApaga = document.getElementById('audioApaga')
+
         let quebrada = false;
         function mudarLampada(tipo) {
             if (tipo == 1) {
                 arquivo = "img/luz.jpg"
+                audioAcende.play()
             }
             if (tipo == 2) {
                 arquivo = "img/apagada.jpg"
+                audioApaga.play()
             }
             if (tipo == 3) {
                 arquivo = "img/quebrada.jpg"
+                audioQuebrando.play()
             }
             if (!quebrada) {
                 document.getElementById('luz').src = arquivo;
                 if(tipo == 3){
                     quebrada = true;
-                }
+                }                
             }
         }
     </script>

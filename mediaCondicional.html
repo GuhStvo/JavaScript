@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>Tema</span>
+    </header>
+    <main>
+        <div class="container">
+            <form action="#">
+                <h2>Cadastro de notas</h2>
+                <fieldset>
+                    <div class="wrapper">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="wrapper">
+                        <label for="serie">Série:</label>
+                        <select name="serie" id="serie">
+                            <option value="1EM">1EM</option>
+                            <option value="2EM">2EM</option>
+                            <option value="3EM">3EM</option>
+                            <option value="4EM">4EM</option>
+                            <option value="5EM">5EM</option>
+                        </select>
+                    </div>
+                    <div class="wrapper">
+                        <label for="materia">Matéria:</label>
+                        <select name="materia" id="materia">
+                            <option value="Português">Português</option>
+                            <option value="Matemática">Matemática</option>
+                            <option value="Física">Física</option>
+                            <option value="Geografia">Geografia</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="wrapper">
+                        <label for="bimestre1">Bimestre 1</label>
+                        <input id="bimestre1" type="text">
+                    </div>
+                    <div class="wrapper">
+                        <label for="bimestre2">Bimestre 2</label>
+                        <input id="bimestre2" type="text">
+                    </div>
+                    <div class="wrapper">
+                        <label for="bimestre3">Bimestre 3</label>
+                        <input id="bimestre3" type="text">
+                    </div>
+                    <div class="wrapper">
+                        <label for="bimestre4">Bimestre 4</label>
+                        <input id="bimestre4" type="text">
+                    </div>
+                    <div class="wrapper">
+                        <label>Média</label>
+                        <div id="printMedia1"></div>
+                    </div>
+
+                    <button onclick="clicarBTN(1)">Calcular</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="container">
+            <h2>Relatório</h2>
+            <table border="1">
+                <tr>
+                    <th>Nome Completo</th>
+                    <th>Série</th>
+                    <th>Matéria</th>
+                    <th>B1</th>
+                    <th>B2</th>
+                    <th>B3</th>
+                    <th>B4</th>
+                    <th>Média</th>
+                    <th>Situação</th>
+                </tr>
+
+                <tr>
+                    <td id="printNome"></td>
+                    <td id="printSerie"></td>
+                    <td id="printMateria"></td>
+                    <td id="printB1"></td>
+                    <td id="printB2"></td>
+                    <td id="printB3"></td>
+                    <td id="printB4"></td>
+                    <td id="printMedia2"></td>
+                    <td id="printSituacao"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        
+
+        function clicarBTN(calcular) {
+            let nomeValor = document.getElementById('nome').value
+            let serieValor = document.getElementById('serie').value
+            let materiaValor = document.getElementById('materia').value
+
+            // Váriaveis para pegar valores do bimestre
+            const b1 = parseFloat(document.getElementById('bimestre1').value)
+            const b2 = parseFloat(document.getElementById('bimestre2').value)
+            const b3 = parseFloat(document.getElementById('bimestre3').value)
+            const b4 = parseFloat(document.getElementById('bimestre4').value)
+            // Calculo da média
+            const media = (b1 + b2 + b3 + b4) / 4
+
+            if (calcular == 1 && media > 7) { // Caso seja maior de 7
+                document.getElementById('printMedia1').innerHTML = media.toFixed(1)
+                document.getElementById('printMedia2').innerHTML = media.toFixed(1)
+                document.getElementById('printSituacao').innerHTML = "Aprovado"
+
+                document.getElementById('printNome').innerHTML = nomeValor
+                document.getElementById('printSerie').innerHTML = serieValor
+                document.getElementById('printMateria').innerHTML = materiaValor
+
+                document.getElementById('printB1').innerHTML = b1
+                document.getElementById('printB2').innerHTML = b2
+                document.getElementById('printB3').innerHTML = b3
+                document.getElementById('printB4').innerHTML = b4
+            } else { // Caso não seja maior que 7
+                document.getElementById('printMedia1').innerHTML = media.toFixed(1)
+                document.getElementById('printMedia2').innerHTML = media.toFixed(1)
+                document.getElementById('printSituacao').innerHTML = "Reprovado"
+
+                document.getElementById('printNome').innerHTML = nomeValor
+                document.getElementById('printSerie').innerHTML = serieValor
+                document.getElementById('printMateria').innerHTML = materiaValor
+
+                document.getElementById('printB1').innerHTML = b1
+                document.getElementById('printB2').innerHTML = b2
+                document.getElementById('printB3').innerHTML = b3
+                document.getElementById('printB4').innerHTML = b4
+            }
+        }        
+        
+    </script>
+</body>
+</html>
