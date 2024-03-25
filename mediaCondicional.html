@@ -117,6 +117,8 @@
             const media = (b1 + b2 + b3 + b4) / 4
 
             if (calcular == 1 && media > 7) { // Caso seja maior de 7
+                event.preventDefault()
+
                 document.getElementById('printMedia1').innerHTML = media.toFixed(1)
                 document.getElementById('printMedia2').innerHTML = media.toFixed(1)
                 document.getElementById('printSituacao').innerHTML = "Aprovado"
