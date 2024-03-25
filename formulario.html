@@ -19,25 +19,25 @@
                     <legend>Formulário de contato</legend>
                     <div class="input-wrapper">
                         <label for="nome">Nome completo</label>
-                        <input id="nome" type="text" placeholder="Nome completo">
+                        <input id="nome" type="text" placeholder="Nome completo" required>
                     </div>
                     <div class="input-wrapper">
                         <label for="email">E-mail</label>
-                        <input id="email" type="text" placeholder="E-mail">
+                        <input id="email" type="text" placeholder="E-mail" required>
                     </div>
                     <div class="input-wrapper">
                         <label for="tel">Telefone</label>
-                        <input type="tel" id="tel" placeholder="Telefone">
+                        <input type="tel" id="tel" placeholder="Telefone" required>
                     </div>
                     <div class="input-wrapper">
                         <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" placeholder="Assunto">
+                        <input type="text" id="assunto" placeholder="Assunto" required>
                     </div>
                     <div class="input-wrapper">
                         <label for="mensagem">Mensagem</label>
-                        <textarea name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+                        <textarea name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
                     </div>
-                    <button onclick="btnEnviar(1)">Enviar</button>
+                    <button type="button" onclick="btnEnviar(1)">Enviar</button>
             </form>
         </div>
 
@@ -69,7 +69,7 @@
     </main>
 
     <script>
-        function btnEnviar(enviar) {
+        function btnEnviar(enviar, event) {
         let nomeValor = document.getElementById('nome').value
         let emailValor = document.getElementById('email').value
         let telefoneValor = document.getElementById('tel').value
