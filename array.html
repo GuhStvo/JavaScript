@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <p>É uma coleção/lista de dados indexados, ou seja, informações sequenciais começando em 0 (SEMPRE)</p>
+
+    <script>
+        let massas = ['Pizza', 'Raviole', 'Esfiha', 'Canelone']
+        let fruta = (['Kiwi', 'Figo', 'Manga', 'Banana', 'Abacaxi', 'Morango'])
+
+        console.log(massas)
+        console.log(fruta)
+
+        massas.push('Epaguete', 'Macarrão') // push adiciona um item ao fina lda lista
+        massas[massas.length-1] // mostra o último item da lista
+
+        let herois = []
+        herois[0] = 'Batman'
+        herois[1] = 'Hulk'
+        herois[2] = 'Homem de Ferro'
+        herois[3] = 'Thor'
+
+        console.log('O heroi ' +herois[1]+ ' almoça '+massas[3]+' e come ' +fruta[4]+ ' como sobremesa')
+        console.log("Quantos herois? " + herois.length+ " herois.") // length: Quantidade de itens na lista
+
+        // sort() = método/função que ordena o conteúdo do array por ordem alfabética
+        console.log(massas.sort())
+
+        //indexOff() = método/função que retorna o indece do elemento
+        console.log("O indece da pizza é " +massas.indexOf("Pizza"))
+
+        //reverse() = método / função inverte ao contrário a lista
+        console.log(massas.reverse())
+        console.log("Agora o indece da pizza passa a ser " +massas.indexOf("Pizza"))
+
+        let coisas = [10, "Gustavo", new Date, herois[2], "<h2>Olá mundo</h2>"]
+        console.log(coisas)
+
+        // Matriz
+        let programas = [
+            //0             1
+            ["World",      "Excel"],          //0
+            ["Photoshop",  "Ilustrador"],     //1
+            ["Vs code",    "Sublime"]         //2
+
+        ]
+
+        // primeiro vem a linha depois coluna
+        console.log("Os programas são: " +programas[2][0]+ " e " +programas[1][1])
+        
+    </script>
+</body>
+</html>
