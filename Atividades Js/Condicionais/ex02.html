@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let text = prompt('Digite uma palavra')
+        let textInvert = text.split("").reverse().join("")
+
+        if (text.toLowerCase() === textInvert.toLowerCase()) {
+            document.write(text+ ' é um palíndromo')
+        } else {
+            document.write(text+ ' não é um palíndromo')
+        }   
+
+    </script>
+
+</body>
+</html>
