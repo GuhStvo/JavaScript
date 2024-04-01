@@ -8,11 +8,14 @@
 <body>
     <script>
 
-        let num = 5/* Number(prompt('Digite um número para saber o fatorial:')) */
-
-        if (num )
-        
-
+    const numFat = parseInt(prompt('Digite um número para saber o fatorial dele'))
+    function fatorial(n){ // Função fatorial recebe "n"
+        if (n > 1) {
+            return n * fatorial(n - 1) // Usando a recursividade, ele vai sempre irá retornar este calculo enquanto o fatorial(n) seja maior que 1
+        }
+        return n
+    }
+    console.log(fatorial(numFat))
     </script>
 </body>
 </html>
