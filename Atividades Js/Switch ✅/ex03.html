@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dia = Number(prompt("Digite um um dia da semana com base no número."))
+
+        let diaSemana
+
+        switch (dia) {
+            case 1: case 8: case 15: case 22: case 29:
+                diaSemana = "Domingo";
+                break;
+            case 2: case 9: case 16: case 23: case 30:
+                diaSemana = "Segunda"
+                break;
+            case 3: case 10: case 17: case 24: case 31:
+                diaSemana = "Terça"
+                break;
+            case 4: case 11: case 18: case 25:
+                diaSemana = "Quarta"
+                break;
+            case 5: case 12: case 19: case 26:
+                diaSemana = "Quinta"
+                break;
+            case 6: case 13: case 20: case 27:
+                diaSemana = "Sexta"
+                break;
+            case 7: case 14: case 21: case 28:
+                diaSemana = "Sábado"
+                break;
+            default:
+                diaSemana = "Data invalida"
+                break;
+        }
+
+        alert("O dia da semana é: " +diaSemana)
+    </script>
+</body>
+</html>

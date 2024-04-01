@@ -7,10 +7,17 @@
 </head>
 <body>
     <script>
+    let num = 1
+    let soma = 0
+    let contador = 0
 
-        let num = Number(prompt('Digite um número para saber o fatorial:'))
-        
+    do {
+        soma = soma + num 
+        num++ 
+        contador++
+    } while (contador < 10);
 
+    console.log("A soma dos primeiros 10 números naturais é:", soma);
     </script>
 </body>
 </html>

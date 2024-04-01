@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert(`
+        Para ter algum resultado utilize os códigos a baixo:
+        [123456]
+        [789456]
+        [456123]
+        [456789]`)
+        let codigo = Number(prompt('Digite o código de rastreio:'))
+        let status
+
+        switch (codigo) {
+            case 123456:
+                status = "AGUARDANDO PAGAMENTO";
+                break;
+            case 789456:
+                status = "PRODUÇÃO";
+                break;
+            case 456123:
+                status = "ENVIADO";
+                break;
+            case 456789:
+                status = "ENTREGUE"
+                break;
+        }
+
+        if (status == undefined){
+            alert('Código não encontrado ou não inserido')
+        } else {
+            alert(`
+            Código de rastreio: [${codigo}]
+            Status de produto: ${status}`)
+        }
+        
+    </script>
+</body>
+</html>

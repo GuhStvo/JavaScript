@@ -8,16 +8,24 @@
 <body>
     <script>
 
-        const idade = parseInt(prompt('Digite sua idade:'))
+        const idade = prompt('Digite sua idade:')
+        console.log(idade)
 
-        if (idade <= 12) {
+        if( idade < 1) {
+            alert('Dados incorretos ou não inseridos')
+            window.location.reload(true)
+        } else if (idade <= 12) {
             alert('Criança')
+            window.location.reload(true)
         } else if (idade <= 19){
             alert('Adolescente')
+            window.location.reload(true)
         } else if (idade <= 59) {
             alert('Adulto')
+            window.location.reload(true)
         } else {
-            alert("idoso")
+            alert("Idoso")
+            window.location.reload(true)
         }
 
     </script>

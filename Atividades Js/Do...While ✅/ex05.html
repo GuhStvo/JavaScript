@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fibonacci = [0, 1]
+        let contador = 0
+
+        do{
+            let calculo = fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]
+            fibonacci.push(calculo)
+            contador++
+        }while(contador < 8)
+
+        console.log("Saída: "+fibonacci)
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontuação</title>
+</head>
+<body>
+
+    <form action="#">
+        <label for="nota">Escolha sua nota:</label>
+        <select name="nota" id="nota">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <button type="button" onclick="btn()">Ver pontuação</button>
+    </form>
+
+    <p></p>
+
+    <script>
+        function btn() {
+            const nota = document.querySelector("select").value
+            console.log(nota)
+
+            if(nota === "A") {
+                document.querySelector('p').innerHTML = ('Sua pontuação foi de 90 pontos!')
+            } else if (nota === "B"){
+                document.querySelector('p').innerHTML = ('Sua pontuação foi de 80 pontos!')
+            } else {
+                document.querySelector('p').innerHTML = ('Sua pontuação foi de 70 pontos!')
+            }
+            
+        }
+    </script>
+</body>
+</html>

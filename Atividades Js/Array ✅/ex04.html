@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const lista = [1,2,3,4,5,6,7,8,9,10]
+        
+        const listaPares = lista.filter((par) => par % 2 === 0)
+        // Com a função Filter(), iremos criar uma nova lista em cima da lista adiquirida, neste caso "lista". Sendo gerado um novo array apenas com a condição que esta sendo passada. Neste caso a de pegar somente números pares.
+        alert("Nesta lista contem "+listaPares.length+ " Números pares, sendo eles "+listaPares)
+    </script>
+
+</body>
+</html>

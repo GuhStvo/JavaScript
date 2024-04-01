@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 30px; display: flex; justify-content: center;
+align-items: center; height: 100vh; overflow: hidden; transition: all 700ms;">
+    <script>
+        const data = new Date()
+        // const dataHora = data.getUTCHours
+        console.log(data.getHours())
+        console.log(data.getMinutes())
+        console.log(data)
+
+        if (data.getHours() < 6) {
+            document.write('Madrugada')
+            document.body.style.backgroundColor = "#282828"
+            document.body.style.color = "#fff"
+        } else if (data.getHours() < 12) {
+            document.write('Manhã')
+            document.body.style.backgroundColor = "#C5D7D9"
+            document.body.style.color = "#282828"
+        } else if (data.getHours() < 18){
+            document.write('Tarde')
+            document.body.style.backgroundColor = "#F06A0F"
+            document.body.style.color = "gray"
+        } else {
+            document.write('Noite')
+            document.body.style.backgroundColor = "#013440"
+            document.body.style.color = "#fff"
+        }
+    </script>
+</body>
+</html>
